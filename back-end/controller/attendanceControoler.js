@@ -27,7 +27,7 @@ const makeAttendance  = async (req, res) => {
             return res.send({success: false, message: 'Invlaid Session'})
         }
 
-        const course = await Course.findOne({_id: session.courseId, departments: student.department})
+        const course = await Course.findOne({_id: session.courseId, departments: student.department, semester: student.semester})
 
         if (!course) {
             return res.send({success: false, message: 'You can\'t attend to this course '})

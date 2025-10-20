@@ -12,7 +12,7 @@ const cookieParser = require('cookie-parser')
 
 const app = express();
 
-const allowedOrigins = ['https://deploy-mern-lwhq.vercel.app','http://localhost:5173']
+const allowedOrigins = ['https://testing-portal-client.vercel.app/','http://localhost:5173']
 
 app.use(cors({origin: allowedOrigins, credentials: true}));
 app.use(express.urlencoded({extended: true}));

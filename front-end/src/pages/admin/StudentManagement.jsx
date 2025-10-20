@@ -234,7 +234,7 @@ const StudentManagement = () => {
         </div>
 
         <div>
-          <label className="block mb-1 font-medium">Year</label>
+          <label className="block mb-1 font-medium">Semester</label>
           <select
             name="semester"
             value={formData.semester}

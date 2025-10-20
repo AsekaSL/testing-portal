@@ -73,7 +73,7 @@ const GeneratedQr = () => {
               {/* Placeholder QR Code - In real app, use qrcode library */}
               <div className="w-64 h-64 bg-purple-100 border-4 border-purple-300 rounded flex items-center justify-center">
                 <div className="text-center">
-                  <QRCode value={ `http://localhost:5173/qr-loading/${sessionId}`} size={180} />
+                  <QRCode value={ `https://testing-portal-client.vercel.app/qr-loading/${sessionId}`} size={180} />
                 </div>
               </div>
             </div>

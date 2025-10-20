@@ -19,6 +19,10 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(cookieParser())
 
+app.use('/', (req, res) => {
+    return res.send('Working Backend')
+})
+
 app.use('/api/auth', authRouter)
 app.use('/api/student', studentRouter)
 app.use('/api/course', courseRouter)

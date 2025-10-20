@@ -7,7 +7,7 @@ const Course = require('../model/Course.js')
 const addStudent = async (req, res) => {
     try {
 
-        const {userId,fullName, year, regiNumber, indexNum, email, contactNum, address, department, academicYear} = req.body
+        const {userId,fullName, year, regiNumber, indexNum, email, contactNum, address, department, semester} = req.body
         
         const user = await User.findById(userId)
 
@@ -63,8 +63,8 @@ const addStudent = async (req, res) => {
             return res.send({success: false, message: 'Missing Department'})
         }
 
-        if (!academicYear) {
-            return res.send({success: false, message: 'Missing Academic Year'})
+        if (!semester) {
+            return res.send({success: false, message: 'Missing semester'})
         }
 
 
@@ -73,7 +73,7 @@ const addStudent = async (req, res) => {
             regiNumber, indexNum,
             email, contactNum,
             address, department, 
-            academicYear,
+            semester
         })
 
         const response = await student.save();

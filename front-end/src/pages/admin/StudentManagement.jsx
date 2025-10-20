@@ -15,7 +15,7 @@ const StudentManagement = () => {
     address: "",
     email: "",
     index_num: "",
-    academicYear: ''
+    semester: ''
   });
 
   //search use state
@@ -50,7 +50,7 @@ const StudentManagement = () => {
         contactNum: formData.contact_num,
         address: formData.address,
         department: formData.dep_id,
-        academicYear: formData.academicYear
+        semester: formData.semester
       });
 
       if(data.success) {
@@ -236,17 +236,21 @@ const StudentManagement = () => {
         <div>
           <label className="block mb-1 font-medium">Year</label>
           <select
-            name="academicYear"
-            value={formData.academicYear}
+            name="semester"
+            value={formData.semester}
             onChange={handleChange}
             className="w-full border px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
             required
           >
-            <option value="">Select Academic Year</option>
-            <option value={1}>1st Year</option>
-            <option value={2}>2nd Year</option>
-            <option value={3}>3rd Year</option>
-            <option value={4}>4th Year</option>
+            <option value="">Select Semester</option>
+            <option value={1}>1st Semester</option>
+            <option value={2}>2nd Semester</option>
+            <option value={3}>3rd Semester</option>
+            <option value={4}>4th Semester</option>
+            <option value={5}>5th Semester</option>
+            <option value={6}>6th Semester</option>
+            <option value={7}>7th Semester</option>
+            <option value={8}>8th Semester</option>
           </select>
         </div>
 
